@@ -17,8 +17,11 @@ const commentRoutes     = require('./routes/comments');
 const campgroundRoutes  = require('./routes/campgrounds');
 const indexRoutes       = require('./routes/index');
 
+// mongodb+srv://harshit:<password>@yelpcamp-cn6dg.mongodb.net/test?retryWrites=true&w=majority
+// mongodb://localhost/yelp_camp
+
 mongoose
-.connect("mongodb://localhost/yelp_camp", { 
+.connect("mongodb+srv://harshit:harsh16it@yelpcamp-cn6dg.mongodb.net/test?retryWrites=true&w=majority", { 
     useNewUrlParser: true,
     useFindAndModify: false
 })
