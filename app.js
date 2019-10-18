@@ -20,8 +20,10 @@ const indexRoutes       = require('./routes/index');
 // mongodb+srv://harshit:<password>@yelpcamp-cn6dg.mongodb.net/test?retryWrites=true&w=majority
 // mongodb://localhost/yelp_camp
 
+const dbUrl = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+
 mongoose
-.connect("mongodb+srv://harshit:harsh16it@yelpcamp-cn6dg.mongodb.net/test?retryWrites=true&w=majority", { 
+.connect(dbUrl, { 
     useNewUrlParser: true,
     useFindAndModify: false
 })
