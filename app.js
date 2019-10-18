@@ -59,7 +59,7 @@ app.use('/', indexRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
-let port = 8000;
-app.listen(port, () => {
+let port = process.env.PORT || 8000;
+app.listen(port, process.env.IP, () => {
     console.log('Server is running on port ' + port);
 });
